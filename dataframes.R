@@ -11,3 +11,8 @@ rings <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
 # Create DF
 
 planets.df <- data.frame(planets, type, diameter, rotation, rings)
+
+# Order by size
+
+positions <- order(planets.df$diameter, decreasing = TRUE)
+largest.first <- planets.df[positions, ]
